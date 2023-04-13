@@ -13,7 +13,4 @@ def created_app():
 def client(created_app):
     return created_app.test_client()
 
-@pytest.fixture
-def context(created_app):
-    return created_app.test_request_context()
         
