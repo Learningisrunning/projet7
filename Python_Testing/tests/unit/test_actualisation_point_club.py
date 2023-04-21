@@ -3,7 +3,9 @@ from server import loadClubs, loadCompetitions
 
 
 def test_actualisation_point_club(client):
-    """expliquer le test"""
+    """Le test a pour but de vérifier que les 
+        points des clubs s'actualise bien une fois
+        qu'ils ont acheté des places."""
 
     clubs =  {
         "name":"Simply Lift",

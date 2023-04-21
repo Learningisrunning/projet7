@@ -1,8 +1,12 @@
 from server import loadClubs, loadCompetitions, purchasePlaces
 
 
-def test_actualisation_point_club(client):
+def test_reservation_not_over_12(client):
 
+    """Le test a pour but de vérifier que les 
+        club n'achète pas plus de 12 places
+        sur une compétition"""
+    
     clubs =  {
         "name":"Iron Temple",
         "email": "admin@irontemple.com",

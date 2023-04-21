@@ -2,6 +2,8 @@ from server import loadCompetitions
 
 
 def test_overbooking_not_possible(client):
+    """Le test a pour but de vérifier que les 
+        club n'achète pas plus de place que disponible."""
 
 
     competitions =  {
