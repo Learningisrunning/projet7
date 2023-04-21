@@ -1,24 +1,29 @@
 from server import loadCompetitions
 
-"""
+
 def test_overbooking_not_possible(client):
 
-    competitions = loadCompetitions()
+
+    competitions =  {
+            "name": "Fall Classic",
+            "date": "2020-10-22 13:30:00",
+            "numberOfPlaces": "13"
+    }
+
     number_of_place = 8
     
-    client.post('/purchasePlaces', data={ 'club' : 'Simply Lift', 'competition' : competitions[0]['name'], 'places' : number_of_place})
+    client.post('/purchasePlaces', data={ 'club' : 'Simply Lift', 'competition' : competitions['name'], 'places' : number_of_place})
 
-    response_seconde_two = client.get('/book/Spring%20Festival/Simply%20Lift')
+    response_seconde_two = client.get('/book/Fall%20Classic/Simply%20Lift')
 
-    if (int(competitions[0]['numberOfPlaces'])-number_of_place) >= 0 :
+    if (int(competitions['numberOfPlaces'])-number_of_place) >= 0 :
 
-        assert str(int(competitions[0]['numberOfPlaces'])-number_of_place) in response_seconde_two.data.decode()
+        assert str(int(competitions['numberOfPlaces'])-number_of_place) in response_seconde_two.data.decode()
 
     else:
 
-        assert competitions[0]['numberOfPlaces'] in response_seconde_two.data.decode()
+        assert competitions['numberOfPlaces'] in response_seconde_two.data.decode()
 
-"""
 
 
 
