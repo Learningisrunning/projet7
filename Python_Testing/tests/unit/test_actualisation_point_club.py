@@ -1,5 +1,3 @@
-from server import loadClubs, loadCompetitions
-
 
 
 def test_actualisation_point_club(client):

@@ -1,4 +1,3 @@
-from server import loadClubs, loadCompetitions, purchasePlaces
 
 
 def test_reservation_not_over_12(client):

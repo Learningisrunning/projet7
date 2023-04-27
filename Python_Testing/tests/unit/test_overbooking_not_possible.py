@@ -1,4 +1,3 @@
-from server import loadCompetitions
 
 
 def test_overbooking_not_possible(client):
